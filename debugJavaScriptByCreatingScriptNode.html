@@ -1,0 +1,19 @@
+<html>
+<button type="button" value="Submit" onclick="run()" >
+Click To Run JavaScript
+<div id='button'></div>
+</button>
+<script type="text/javascript">
+function run(){
+    var button = document.getElementById('button');
+    button.onclick = function(){
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.src = "./attributes.js"; 
+            document.getElementsByTagName("head")[0].appendChild(script);
+            return false;
+    }
+    document.getElementById('button').click();
+}
+</script>
+</html>
